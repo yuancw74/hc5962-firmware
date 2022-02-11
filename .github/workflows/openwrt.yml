@@ -71,8 +71,7 @@ jobs:
         cd openwrt
         ../$DIY_SH
         make defconfig
-    - name: Setup Debug Session
-      uses: csexton/debugger-action@master
+        
     - name: Download package
       id: package
       run: |
