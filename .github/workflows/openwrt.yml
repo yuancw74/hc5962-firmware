@@ -95,5 +95,5 @@ jobs:
     - name : Upload targets
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt firmware
+        name: OpenWrt hc5962 offical firmware
         path: openwrt/bin/targets
