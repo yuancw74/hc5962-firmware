@@ -13,7 +13,7 @@ on:
     types: [published]
   push:
     branches:
-      - master
+      - openwrt-21.02
     paths:
       - 'openwrt.config'
   schedule:
@@ -47,8 +47,9 @@ jobs:
         sudo -E apt-get -qq clean
     - name: Clone source code
       env: 
-        REPO_URL: https://git.openwrt.org/openwrt/openwrt.git
-      run: git clone $REPO_URL openwrt
+        REPO_URL: https://github.com/openwrt/openwrt
+        REPO_BRANCH: openwrt-21.02
+      run: git clone $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: Enable SSR Plus
       run: cd openwrt && git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld && sh $GITHUB_WORKSPACE/add.sh
