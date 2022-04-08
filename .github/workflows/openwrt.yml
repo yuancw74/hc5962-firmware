@@ -50,8 +50,8 @@ jobs:
         REPO_BRANCH: openwrt-21.02
       run: git clone $REPO_URL -b $REPO_BRANCH openwrt
 
-    - name: Enable SSR Plus
-      run: cd openwrt && git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld && sh $GITHUB_WORKSPACE/add.s
+   # - name: Enable SSR Plus
+    #  run: cd openwrt && git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld && sh $GITHUB_WORKSPACE/add.s
  
     - name: Enable custom feed
       run: |
