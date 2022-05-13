@@ -71,7 +71,7 @@ jobs:
       
     - name: Load custom configuration
       env:
-        CONFIG_FILE: 'Lean_LEDE_HC5962.config'
+        CONFIG_FILE: 'openwrt3.config'
         DIY_SH: diy.sh
       run: |
         [ -e files ] && mv files openwrt/files
